@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alert classes and plugins</title>
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-7">
+                <div class="alert alert-success text-muted">This is an <a class="alert-link">alert</a></div>
+            </div>
+            <div class="col-md-7">
+                <div id="closebox" class="alert alert-secondary">This is an alert</div>
+            </div>
+            <button id="close" class="btn btn-danger">close</button>
+            <div class="col-md-7">
+                <div class="alert alert-danger">
+                    <h3 class="alert-heading">Lorem ipsum dolor sit amet.
+                        <button class="close" data-dismiss="alert"><span>&Cross;</span></button>
+                    </h3>
+                    <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore necessitatibus ducimus et hic voluptatum, possimus inventore eum sint ad deserunt, esse dolor cumque quod officiis praesentium consequatur rerum sunt dicta architecto
+                        iure totam at consectetur labore molestias! Laudantium perspiciatis recusandae omnis laborum! Veritatis esse atque deleniti odio. Neque voluptates dolores quaerat odio dolore ducimus culpa, aliquam sit, quisquam commodi illo sed
+                        recusandae libero natus reiciendis perspiciatis voluptas quod! Ducimus ab totam voluptate facilis! Vel, autem consectetur quo in, doloremque voluptatem corporis molestias quibusdam beatae saepe delectus odio sapiente aut consequuntur
+                        aspernatur at sunt eius harum assumenda veritatis. Rerum, veniam dolor.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dolorum adipisci dolore nam placeat temporibus, officiis nihil ducimus obcaecati eligendi, iusto fugit mollitia assumenda aspernatur ea in fuga ipsum iste!
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-4.6.0-dist/js/jQuery.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/popper.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/ej.js"></script>
+    <script>
+        $(function() {
+            $("#close").click(function() {
+                $("#closebox").alert("close");
+            });
+            $("#closebox").on("close.bs.alert", function() {
+                alert("Close");
+            });
+            $("#closebox").on("closed.bs.alert", function() {
+                alert("Closed");
+            });
+        });
+    </script>
+</body>
+
+</html>
